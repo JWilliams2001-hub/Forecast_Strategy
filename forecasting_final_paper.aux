@@ -1,0 +1,74 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{5}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{5}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Strategy and Conceptual Framework}{6}{section.2}\protected@file@percent }
+\newlabel{sec:framework}{{2}{6}{Strategy and Conceptual Framework}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Economic Motivation}{6}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}The Fair Value Gap Framework}{7}{subsection.2.2}\protected@file@percent }
+\newlabel{eq:gap}{{1}{7}{The Fair Value Gap Framework}{equation.1}{}}
+\newlabel{eq:zscore}{{2}{7}{The Fair Value Gap Framework}{equation.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Signal Generation and Position Logic}{7}{subsection.2.3}\protected@file@percent }
+\newlabel{eq:signal}{{3}{7}{Signal Generation and Position Logic}{equation.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}The Rolling Regression Strategy}{8}{subsection.2.4}\protected@file@percent }
+\newlabel{eq:ols}{{4}{8}{The Rolling Regression Strategy}{equation.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}The Kalman Filter Strategy}{8}{subsection.2.5}\protected@file@percent }
+\newlabel{eq:kf_transition}{{5}{8}{The Kalman Filter Strategy}{equation.5}{}}
+\newlabel{eq:kf_observation}{{6}{9}{The Kalman Filter Strategy}{equation.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Why Weekly Frequency}{9}{subsection.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{10}{section.3}\protected@file@percent }
+\newlabel{sec:methodology}{{3}{10}{Methodology}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Data}{10}{subsection.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Data Coverage Summary}}{10}{table.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:data}{{1}{10}{Data Coverage Summary}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Target Variable}{10}{subsection.3.2}\protected@file@percent }
+\newlabel{eq:target}{{7}{11}{Target Variable}{equation.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Train–Test Split}{11}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Leakage Prevention}{11}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Feature Selection}{12}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Rolling Regression Hyperparameter Optimization}{12}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Kalman Filter Hyperparameter Optimization}{12}{subsection.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Walk-Forward Backtest}{13}{subsection.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Performance Metrics}{13}{subsection.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{14}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{14}{Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Feature Selection and Hyperparameter Tuning}{14}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Rolling regression hyperparameter grid on the training sample. The horizontal axis shows the trailing window length (weeks); the vertical axis shows the signal threshold (standard deviations). Colour indicates training-period cumulative return. The black star marks the neighbourhood-smoothed optimum at $W = 26$ weeks and $\tau = 0.3878$.}}{14}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:roll_heatmap}{{1}{14}{Rolling regression hyperparameter grid on the training sample. The horizontal axis shows the trailing window length (weeks); the vertical axis shows the signal threshold (standard deviations). Colour indicates training-period cumulative return. The black star marks the neighbourhood-smoothed optimum at $W = 26$ weeks and $\tau = 0.3878$}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Kalman filter Stage~2 hyperparameter grid on the training sample. Axes show the log-scaled process noise scale $q$ and observation noise $r$. The black star marks the smoothed optimum at $q = 2.20\times 10^{-4}$ and $r = 0.2308$.}}{15}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:kf_heatmap}{{2}{15}{Kalman filter Stage~2 hyperparameter grid on the training sample. Axes show the log-scaled process noise scale $q$ and observation noise $r$. The black star marks the smoothed optimum at $q = 2.20\times 10^{-4}$ and $r = 0.2308$}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Training-Period Diagnostics}{15}{subsection.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Rolling regression training-period diagnostics. Top: observed S5ENRS log price (blue) and model-implied fair value (orange). Middle: fair value gap in log terms. Bottom: trading signal ($+1$ = long, $0$ = flat, $-1$ = short).}}{16}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:roll_diagnostics}{{3}{16}{Rolling regression training-period diagnostics. Top: observed S5ENRS log price (blue) and model-implied fair value (orange). Middle: fair value gap in log terms. Bottom: trading signal ($+1$ = long, $0$ = flat, $-1$ = short)}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Out-of-Sample Performance}{16}{subsection.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Out-of-Sample Performance Metrics (January 2018 – February 2026)}}{17}{table.caption.6}\protected@file@percent }
+\newlabel{tab:performance}{{2}{17}{Out-of-Sample Performance Metrics (January 2018 – February 2026)}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Cumulative Return Comparison}{18}{subsection.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Cumulative returns (growth of \$1) for the rolling regression strategy, Kalman filter strategy, S5ENRS buy-and-hold, and S\&P 500 benchmark over the out-of-sample test period (January 2018 – February 2026).}}{18}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:cumret}{{4}{18}{Cumulative returns (growth of \$1) for the rolling regression strategy, Kalman filter strategy, S5ENRS buy-and-hold, and S\&P 500 benchmark over the out-of-sample test period (January 2018 – February 2026)}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Drawdown Comparison}{18}{subsection.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Drawdown paths for the rolling regression strategy, Kalman filter strategy, S5ENRS buy-and-hold, and S\&P 500 benchmark over the out-of-sample test period.}}{19}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:drawdown}{{5}{19}{Drawdown paths for the rolling regression strategy, Kalman filter strategy, S5ENRS buy-and-hold, and S\&P 500 benchmark over the out-of-sample test period}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Return Concentration and Hit Rates}{19}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Sensitivity and Robustness}{20}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{20}{section.5}\protected@file@percent }
+\newlabel{sec:conclusion}{{5}{20}{Conclusion}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{References}{22}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Additional Figures}{22}{appendix.A}\protected@file@percent }
+\newlabel{app:figures}{{A}{22}{Additional Figures}{appendix.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Data Audit}{22}{subsection.A.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Full-sample data audit. Top: S5ENRS index level. Middle: U.S.\ 1-year Treasury yield (H15T1Y). Bottom: S\&P 500 trailing P/E (SP500 PE) and forward P/E (SP500 Best PE).}}{23}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:data_audit}{{6}{23}{Full-sample data audit. Top: S5ENRS index level. Middle: U.S.\ 1-year Treasury yield (H15T1Y). Bottom: S\&P 500 trailing P/E (SP500 PE) and forward P/E (SP500 Best PE)}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Train–Test Split}{23}{subsection.A.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces S5ENRS price series with train–test split at January 5, 2018. Training period shown in blue; test period shown in red.}}{24}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:split}{{7}{24}{S5ENRS price series with train–test split at January 5, 2018. Training period shown in blue; test period shown in red}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Kalman Filter Training Diagnostics}{24}{subsection.A.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Kalman filter training-period diagnostics. Top: observed S5ENRS log price (blue) and Kalman-implied fair value (orange). Middle: fair value gap. Bottom: trading signal ($+1$ = long, $0$ = flat, $-1$ = short).}}{24}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:kf_diagnostics}{{8}{24}{Kalman filter training-period diagnostics. Top: observed S5ENRS log price (blue) and Kalman-implied fair value (orange). Middle: fair value gap. Bottom: trading signal ($+1$ = long, $0$ = flat, $-1$ = short)}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Test-Period Signal Timelines}{25}{subsection.A.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Test-period signals for the rolling regression (top) and Kalman filter (bottom) strategies. Steps indicate $+1$ (long), $0$ (flat), and $-1$ (short) positions for each week.}}{25}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:signals_test}{{9}{25}{Test-period signals for the rolling regression (top) and Kalman filter (bottom) strategies. Steps indicate $+1$ (long), $0$ (flat), and $-1$ (short) positions for each week}{figure.caption.13}{}}
+\gdef \@abspage@last{25}
