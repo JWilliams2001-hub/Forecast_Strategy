@@ -2,6 +2,8 @@
 
 Builds and back-tests two weekly systematic trading strategies for the S&P 500 Energy Sector Index (S5ENRS). Both strategies generate long/flat/short signals from a fair value gap — the spread between observed price and an econometrically estimated fair value — derived from macroeconomic inputs (1-year Treasury yield, S&P 500 P/E). Performance is evaluated strictly out-of-sample using a leakage-safe walk-forward design over Jan 2018 – Feb 2026.
 
+> **Data note:** The analysis relies on data exported from a Bloomberg Terminal. Those source files are **not included** in this repository because they are proprietary and license-restricted. See [Data Availability](#data-availability) and [Running Locally](#running-locally) for details.
+
 ---
 
 ## Research Objective
@@ -56,7 +58,7 @@ Full analysis: [paper/forecasting_final_paper.pdf](paper/forecasting_final_paper
 └── README.md
 ```
 
-> **`local_data/`** — The data required to run the notebook (Bloomberg Terminal exports) is not distributed in this repo due to licensing. See **Running Locally** below.
+> **`local_data/`** — Intentionally excluded from version control. This directory holds Bloomberg Terminal exports that are proprietary and cannot be redistributed. It does not appear in the repo tree above. See [Running Locally](#running-locally) for the expected folder layout.
 
 ---
 
@@ -70,7 +72,7 @@ cd Forecast_Strategy
 pip install -r requirements.txt
 ```
 
-**Data setup:** The notebook reads from a `local_data/` directory that is not included in the repo. Create it and place the following files there:
+**Data setup:** This repo does **not** contain the Bloomberg source data. You must supply your own licensed copies. Create a `local_data/` directory at the repo root and place the following files there:
 
 ```
 local_data/
@@ -94,6 +96,14 @@ Once `local_data/` is populated, open the notebook:
 ```bash
 jupyter notebook notebooks/fair_value_gap_strategy.ipynb
 ```
+
+---
+
+## Data Availability
+
+The core price, P/E, and yield series used in this analysis were exported from a Bloomberg Terminal. These files are **not included** in the public repository because Bloomberg's licensing terms prohibit redistribution of terminal data.
+
+The notebook is configured to read from a user-created `local_data/` folder (see [Running Locally](#running-locally)). Researchers with Bloomberg access can reproduce all results by exporting the series listed there. For the non-proprietary series (S&P 500 price, 1-year Treasury yield), free public alternatives are noted in that section.
 
 ---
 
