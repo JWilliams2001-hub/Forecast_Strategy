@@ -12,3 +12,30 @@
 # macOS
 .DS_Store
 **/.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local licensed data (Bloomberg-sourced; not redistributed)
+local_data/
+
+# Archive (dev notebooks, side projects — not public-facing)
+archive/
+
+# Audit artifacts
+repo_audit.json
+
+# Claude Code local settings
+.claude/
