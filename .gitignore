@@ -1,3 +1,7 @@
+# LaTeX source and bibliography
+*.tex
+*.bib
+
 # LaTeX intermediate files
 *.aux
 *.bbl
